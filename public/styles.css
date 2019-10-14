@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+
+.descriptions {
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none; 
+}
+
+#header {
+    height: 150px;
+    background: #c9e9aa;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+
+#logo a img {
+    height: 130px
+}
+
+#footer {
+    height: 400px;
+    position: relative
+}
+
+#watermark {
+    position: absolute;
+    color: grey;
+    bottom: 10px;
+    right: 20px;
+    font-size: 1.6rem
+}
+
+#filters {
+    flex: 1;
+    padding-left: 50px
+}
+
+#search {
+    width: 50%;
+    font-size: 1.2rem
+}
+
+#signinForm {
+    padding: 10px;
+}
+
+#loginButtons {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px
+}
+
+#signinBtn {
+    margin: 0 20px
+}
+
+#userWelcome {
+    font-size: 1.8rem;
+    display: none
+}
+
+
+
+.box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 5px rgb(54, 56, 88)
+}
+
+/** WAVES */
+.waves {
+    position: relative; /* necessary for waves */
+    width: 100%;    /* necessary for waves */
+    min-height: 100vh;  /* necessary for waves */
+    background: linear-gradient(#c9e9aa, #3586ff);    /* necessary for waves */ 
+    overflow: hidden;   /* necessary for waves */
+    display: flex;
+    padding-top: 40px;
+    justify-content: space-around
+}
+
+.waves .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(images/wave.png);
+    background-size: 1000px 100px
+}
+
+.waves .wave.wave1 {
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0
+}
+
+.waves .wave.wave2 {
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px
+}
+
+.waves .wave.wave3 {
+    animation: animate 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px
+}
+
+.waves .wave.wave4 {
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px
+}
+
+@keyframes animate2 {
+    0% {
+        background-position-x: 0
+    }
+    100% {
+        background-position-x: -1000px
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: 0
+    }
+    100% {
+        background-position-x: 1000px
+    }
+}
+/** END WAVES*/
+
+/** Parallax cards*/
+.container {
+    position: relative;
+    display: flex;
+    flex-flow: wrap;
+    flex: 3;
+    justify-content: space-around;
+    padding-right: 50px;
+    width: 1400px;
+    margin-bottom: 110px
+}
+
+.container .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden
+}
+
+.container .box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease-in-out
+}
+
+.container .box:hover .imgBx {
+    transform: translateY(-100%)
+}
+
+.container .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain
+}
+
+.container .box .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease-in-out
+}
+
+.container .box .layer.layer1 {
+    background: #ffd000; 
+    transform: translateY(100%)
+}
+
+.container .box:hover .layer.layer1 {
+    transform: translateY(-100%)
+}
+
+.container .box .layer.layer2 {
+    background: #90ff00;
+    transform: translateY(200%)
+}
+
+.container .box:hover .layer.layer2 {
+    transform: translateY(-100%)
+}
+
+.container .box .contentBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    color: #fff;
+    transition: 1s ease-in-out;
+    transform: translateY(300%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    z-index: 10
+}
+
+.commentBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    color: #fff;
+    transition: 1s ease-in-out;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 20px;
+    z-index: -20
+}
+
+.commentsField {
+    overflow: auto;
+    height: 80%;
+    padding: 10px;
+}
+
+.commentsField p {
+    margin-bottom: 10px;
+    user-select: none
+}
+
+.container .box:hover .contentBx {
+    transform: translateY(0%)
+}
+
+.container .box .contentBx div {
+    transition: 1.5s ease-in-out;
+    transform: translateY(400%)
+}
+
+.container .box:hover .contentBx div {
+    transform: translateY(0%)
+}
+
+.ratings {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    color: rgb(255, 166, 0);
+    user-select: none;
+    cursor: pointer
+}
+
+/** END of cards*/
+
+
+/** BUTTON*/
+  .button{
+    display: inline-block;
+    padding: 6px 20px;
+    margin: 0;
+    cursor: pointer;
+    color: #fff;
+    border: 2px solid #57a957;
+    border-radius: 3px;
+    user-select: none;
+    background-color: #57a957
+  }
+  
+  .button:hover{
+    background-color: #eee;
+    color: black
+  }
+  
+  .button:active{
+    background: #d1bd0b;
+    color: #57a957
+  }
+  
+input {
+    padding: 5px;
+    border-radius: 10px
+}
+
+input:focus {
+    outline: none
+}
+  

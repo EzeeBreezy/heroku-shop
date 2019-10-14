@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shop Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+
+    <header id="header">
+      <span id="logo"><a href="#"><img src="images/logo.png" alt="logo"/></a></span>
+      <input type="text" name="search" id="search" placeholder="Search..." />
+      <div id="userWelcome">
+        <span id="welcomeText">Welcome </span>
+        <button id="signoffBtn" class="button">Sign off</button>
+      </div>
+      <div id="authorization">
+        <form action="#" id="signinForm">
+          <input type="text" name="login" id="login" placeholder="Username..."/>
+          <input type="password" name="password" id="password" placeholder="Password..."/>
+        </form>
+        <div id="loginButtons">
+          <button id="signinBtn" class="button">Sign in</button>
+          <button id="createAccountBtn" class="button">Register</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="waves">
+      <aside id="filters">
+        <p>Some filters here</p>
+      </aside>
+      <section id="container" class="container">
+      </section>
+
+      <!-- * WAVES -->
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
+    </main>
+
+    <footer id="footer">
+      <span id="watermark">Designed by Vladyslav Panchenko</span>
+    </footer>
+
+    <script src="productslist.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
