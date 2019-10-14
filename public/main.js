@@ -23,7 +23,7 @@ const addComment = (parentTag, commentBody) => {
 //* IIFE to check if there are products and users
 //* in localhost and pick`em up
 ;(function initiation() {
-  fetch("http://products")
+  fetch("https://heroku-shop.herokuapp.com/products")
     .then(response => {
       return response.json()
     })
@@ -38,7 +38,7 @@ const addComment = (parentTag, commentBody) => {
       })()
     })
 
-  fetch("http://users")
+  fetch("https://heroku-shop.herokuapp.com/users")
   .then(response => {
     return response.json()
   })
@@ -91,7 +91,7 @@ class ProductBox {
         }
         event.currentTarget.lastChild.innerText = ` ${product.likes} likes`
         
-        fetch(`http://products/${product.id}`, {
+        fetch(`https://heroku-shop.herokuapp.com/products/${product.id}`, {
           method: "PATCH",
           headers: {
             'Content-Type': 'application/json'
@@ -135,7 +135,7 @@ class ProductBox {
           message.value = ''
           addComment(commentsField, commentBody)
           product.comments.push(commentBody)
-          fetch(`http://products/${product.id}`, {
+          fetch(`https://heroku-shop.herokuapp.com/products/${product.id}`, {
             method: "PATCH",
             headers: {
               'Content-Type': 'application/json'
@@ -222,7 +222,7 @@ createAccountBtn.onclick = () => {
       currentUser.username = userLogin
       currentUser.password = userPwd
       users.push(currentUser)
-      fetch('http://users', {
+      fetch('https://heroku-shop.herokuapp.com/users', {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
